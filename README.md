@@ -17,3 +17,4 @@ build my setup and workflow in the blink of an eye.
    - **starship**
  - releases of utils that cannot be dowloaded through apt / cargo
  - repos : submodules that need to be used for download
+ - **.setup_docker** script that acts as a .bashrc mostly useful when on a docker that has your `$HOME` mounted
