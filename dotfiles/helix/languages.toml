@@ -1,0 +1,65 @@
+[[language]]
+name = "rust"
+language-server = { command = "rust-analyzer"}
+formatter = { command = "rustfmt" }
+auto-format = true
+[language.config]
+checkOnSave = { command = "clippy" }
+indent = { tab-width = 4, unit = "t" }
+
+[language.debugger]
+command = "codelldb"
+name = "codelldb"
+port-arg = "--port {}"
+transport = "tcp"
+[[language.debugger.templates]]
+name = "binary"
+request = "launch"
+[[language.debugger.templates.completion]]
+completion = "filename"
+name = "binary"
+[language.debugger.templates.args]
+program = "{0}"
+runInTerminal = true
+
+
+[[language]]
+name = "c"
+language-server = {command = "clangd-12"}
+auto-format = true
+indent = { tab-width = 4, unit = "t" }
+
+[language.debugger]
+command = "codelldb"
+name = "codelldb"
+port-arg = "--port {}"
+transport = "tcp"
+[[language.debugger.templates]]
+name = "binary"
+request = "launch"
+[[language.debugger.templates.completion]]
+completion = "filename"
+name = "binary"
+[language.debugger.templates.args]
+program = "{0}"
+runInTerminal = true
+
+[[language]]
+name = "cpp"
+language-server = {command = "clangd"}
+auto-format = true
+
+[language.debugger]
+command = "codelldb"
+name = "codelldb"
+port-arg = "--port {}"
+transport = "tcp"
+[[language.debugger.templates]]
+name = "binary"
+request = "launch"
+[[language.debugger.templates.completion]]
+completion = "filename"
+name = "binary"
+[language.debugger.templates.args]
+program = "{0}"
+runInTerminal = true
