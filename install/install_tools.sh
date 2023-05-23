@@ -26,21 +26,3 @@ apt-get install ripgrep
 # install starship
 echo "============================== installing starship ==============================="
 curl -sS https://starship.rs/install.sh | sh
-
-
-# install delta
-echo "============================== installing delta ==============================="
-cargo install git-delta
-
-#install lsd
-echo "=============================== installing lsd ==============================="
-cargo install lsd
-
-#install atuin
-echo "=============================== installing atuin ==============================="
-cargo install atuin
-
-# install gitui
-echo "============================== installing gitui ==============================="
-cargo install gitui
-# set +e
