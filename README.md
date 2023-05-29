@@ -11,16 +11,16 @@ contains scripts to automatically install my fav utils
  - **[delta](https://github.com/dandavison/delta/)** enhanced `diff`
  - **[thefuck](https://github.com/nvbn/thefuck)** corrects your input errors
  - **[helix](https://github.com/helix-editor/)** code editor
-     - [clangd-12](https://github.com/clangd/clangd) C lang LSP
-     - TODO marksman markdown LSP
+     - **[clangd-12](https://github.com/clangd/clangd)** C lang LSP
+     - TODO add marksman markdown LSP
  - **[gnome quake extension](https://extensions.gnome.org/extension/1411/quake-mode/)** allows to trigger focus on specific pane on a specfic button press (to always have my term on the side), necessit manual setup
- - **[atuin](https://github.com/ellie/atuin) replaces your ctr + r and history with fuzzy finder
- - **[gitui](https://github.com/extrawurst/gitui) git gui allowing line-by-line commits, very efficient, very useful
- - **[tokei](https://github.com/XAMPPRocky/tokei) to know how many lines of codes a specific repo contains
+ - **[atuin](https://github.com/ellie/atuin)** replaces your ctr + r and history with fuzzy finder
+ - **[gitui](https://github.com/extrawurst/gitui)** git gui allowing line-by-line commits, very efficient, very useful
+ - **[tokei](https://github.com/XAMPPRocky/tokei)** to know how many lines of codes a specific repo contains
  - **[lsd](https://github.com/Peltoche/lsd)** enhanced ls command
- - **[zoxide](https://github.com/ajeetdsouza/zoxide) enhanced cd command
- - **[bat](https://github.com/sharkdp/bat) enhanced cat command
- - **[ripgrep](https://github.com/BurntSushi/ripgrep) enhanced grep command
+ - **[zoxide](https://github.com/ajeetdsouza/zoxide)** enhanced cd command
+ - **[bat](https://github.com/sharkdp/bat)** enhanced cat command
+ - **[ripgrep](https://github.com/BurntSushi/ripgrep)** enhanced grep command
 
 ## install
 Install scripts are split in 3 because if you are on a docker that has $HOME mounted, the binaries installed by rust will be accessible.
