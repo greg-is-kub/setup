@@ -14,11 +14,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 #ros2 Domain ID
 export ROS_DOMAIN_ID=69
 
-# setup colors
-# Add a whale icon to indicate we are in a docker container
-if  [[ ! $(cat /proc/1/sched | head -n 1 | grep systemd) ]] ; then 
-        PS1='🐳 ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ '
-fi
+# allow git in docker 
+eval $(ssh-agent)
+ssh-add ~/.ssh/gitlab-ssh-cnes-fr
 
 # zoxide, upgraded cd
 eval "$(zoxide init bash)"
