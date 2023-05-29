@@ -3,8 +3,8 @@ Build my setup and workflow in the blink of an eye.
 This whole git is meant to be used also for dockers that have `$HOME` mounted.
 
 # summary
-## scripts 
-### install
+## packages that will be installed
+
 contains scripts to automatically install my fav utils
  - **[zellij](https://github.com/zellij-org/zellij/)** terminal multiplexer like tmux but easy to use
  - **[starship](starship.rs/)** terminal prompt to make your term look fancy
@@ -23,7 +23,10 @@ contains scripts to automatically install my fav utils
  - **[ripgrep](https://github.com/BurntSushi/ripgrep)** enhanced grep command
 
 ## install
-Install scripts are split in 3 because if you are on a docker that has $HOME mounted, the binaries installed by rust will be accessible.
+Install scripts are split in 3 for 3 reasons : 
+ - installing rust multiple times is useless.
+ - `apt-get` needs `sudo` & `sudo cargo install` won't work properly.
+ - instaling w/ cargo will install in $HOME so if you are in a docker w/ `$HOME` mounted you don't need to reinstall them. You only need to reinstall the apt pkg.
 You will only need to add them in your path with `.setup_dockerrc` that mainly adds stuff to the `$PATH` and creates aliases.
 
 ```bash
@@ -38,11 +41,8 @@ Just source **.setup_docker** script that acts as a .bashrc mostly useful when o
 You also can copy this file content into your .bashrc
 
 ## dotfiles
-contains all configs setups
+contains all configs setups that you can copy in your `$HOME/.config`.
  - **zoxyde**
  - **delta**
  - **helix**
  - **starship**
-
-## releases
-releases of utils that cannot be dowloaded through apt / cargo
