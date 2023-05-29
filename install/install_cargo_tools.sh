@@ -19,3 +19,7 @@ cargo install atuin
 # install gitui
 echo "============================== installing gitui ==============================="
 cargo install gitui
+
+# install tokei 
+echo "============================== installing tokei ==============================="
+cargo install tokei
