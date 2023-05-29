@@ -23,26 +23,26 @@ contains scripts to automatically install my fav utils
  - **[ripgrep](https://github.com/BurntSushi/ripgrep)** enhanced grep command
 
 ## install
+
+### installing needed pkg
 Install scripts are split in 3 for 3 reasons : 
- - installing rust multiple times is useless.
- - `apt-get` needs `sudo` & `sudo cargo install` won't work properly.
- - instaling w/ cargo will install in $HOME so if you are in a docker w/ `$HOME` mounted you don't need to reinstall them. You only need to reinstall the apt pkg.
-You will only need to add them in your path with `.setup_dockerrc` that mainly adds stuff to the `$PATH` and creates aliases.
+1. You need to install `rust` to use `cargo`, its package manager. Installing rust multiple times is useless.
+2. `apt-get` needs `sudo` & `sudo cargo install` won't work properly.
+3. instaling w/ cargo will install in $HOME so if you are in a docker w/ `$HOME` mounted you don't need to reinstall them. You only need to reinstall the apt pkg.You will only need to add them in your path with `.setup_dockerrc` that mainly adds stuff to the `$PATH` and creates aliases.
 
 ```bash
 cd install/scripts/
-./install_tools.sh
-./install_rust.sh
-./install_cargo_tools.sh
+./install_tools.sh # will install apt pkg
+./install_rust.sh  # will install rust and cargo its pkg manager
+./install_cargo_tools.sh # will install the cargo binaries
 ```
 
-## use
-Just source **.setup_docker** script that acts as a .bashrc mostly useful when on a docker that has your `$HOME` mounted.
-You also can copy this file content into your .bashrc
-
-## dotfiles
-contains all configs setups that you can copy in your `$HOME/.config`.
+### setup 
+1. copy the wanted `dotfiles`(located in the folder  ... dotfiles) in `$HOME/.config` to configure the utils that needs it.
  - **zoxyde**
  - **delta**
  - **helix**
  - **starship**
+ 
+2. **.setup_docker** contains most of the setup you will need, it acts as a .bashrc mostly useful when on a docker that has your `$HOME` mounted. You also can copy this file content into your .bashrc
+
