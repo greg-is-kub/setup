@@ -6,14 +6,19 @@ This whole git is meant to be used also for dockers that have `$HOME` mounted.
 ## packages that will be installed
 
 contains scripts to automatically install my fav utils
+
+Terminal : 
+ - **[Alacritty](https://github.com/alacritty/alacritty)** a good terminal **TODO**
  - **[zellij](https://github.com/zellij-org/zellij/)** terminal multiplexer like tmux but easy to use
  - **[starship](starship.rs/)** terminal prompt to make your term look fancy
+ - **[gnome quake extension](https://extensions.gnome.org/extension/1411/quake-mode/)** allows to trigger focus on specific pane on a specfic button press (to always have my term on the side), necessit manual setup
+
+CLI-tools :
  - **[delta](https://github.com/dandavison/delta/)** enhanced `diff`
  - **[thefuck](https://github.com/nvbn/thefuck)** corrects your input errors
  - **[helix](https://github.com/helix-editor/)** code editor
      - **[clangd-12](https://github.com/clangd/clangd)** C lang LSP
      - TODO add marksman markdown LSP
- - **[gnome quake extension](https://extensions.gnome.org/extension/1411/quake-mode/)** allows to trigger focus on specific pane on a specfic button press (to always have my term on the side), necessit manual setup
  - **[atuin](https://github.com/ellie/atuin)** replaces your ctr + r and history with fuzzy finder
  - **[gitui](https://github.com/extrawurst/gitui)** git gui allowing line-by-line commits, very efficient, very useful
  - **[tokei](https://github.com/XAMPPRocky/tokei)** to know how many lines of codes a specific repo contains
@@ -21,6 +26,9 @@ contains scripts to automatically install my fav utils
  - **[zoxide](https://github.com/ajeetdsouza/zoxide)** enhanced cd command
  - **[bat](https://github.com/sharkdp/bat)** enhanced cat command
  - **[ripgrep](https://github.com/BurntSushi/ripgrep)** enhanced grep command
+
+Others : 
+ - **[sccache](https://crates.io/crates/sccache)** to speed up rust compilation **TODO**
 
 ## install
 
@@ -36,6 +44,9 @@ cd install/scripts/
 ./install_rust.sh  # will install rust and cargo its pkg manager
 ./install_cargo_tools.sh # will install the cargo binaries
 ```
+
+>! Warning : 
+sccache cargo pkg has apt pkg deps : openssl & pkg config, they are installed in install-tools.sh hence you need to run these commands in this specific order.
 
 ### setup 
 1. copy the wanted `dotfiles`(located in the folder  ... dotfiles) in `$HOME/.config` to configure the utils that needs it.
