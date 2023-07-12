@@ -5,10 +5,10 @@ export PATH="$PATH:/root/.local/bin"
 
 # setup path for robot framework
 export PATH="$HOME/.local/bin/:$PATH"
-
 export PATH="~/bin:$PATH"
 
-# cargo install
+# rust & cargo path
+source "$HOME/.cargo/env"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 #ros2 Domain ID
@@ -22,16 +22,19 @@ ssh-add ~/.ssh/gitlab-ssh-cnes-fr
 eval "$(zoxide init bash)"
 # thefuck
 eval $(thefuck --alias FUCK)
-# # starship prompt
+# starship prompt
 eval "$(starship init bash)"
 
-# sudo ln -s ~/.config/helix /root/.config/helix
+# atuin setup
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"
 
 # ALIASES
 ## ROS2
-alias name=valueas cb='colcon build'
+alias cb='colcon build'
 alias cdnav='cd /workspace/robotique/ros2/Navigation-3D-Stack/'
 alias srcsetup='source install/setup.bash'
+
 ## LSD
 alias ls='lsd'
 alias l='ls -l'

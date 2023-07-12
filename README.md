@@ -11,7 +11,7 @@ Terminal :
  - **[Alacritty](https://github.com/alacritty/alacritty)** a good terminal **TODO**
  - **[zellij](https://github.com/zellij-org/zellij/)** terminal multiplexer like tmux but easy to use
  - **[starship](starship.rs/)** terminal prompt to make your term look fancy
- - **[gnome quake extension](https://extensions.gnome.org/extension/1411/quake-mode/)** allows to trigger focus on specific pane on a specfic button press (to always have my term on the side), necessit manual setup
+ - **[gnome quake extension](https://extensions.gnome.org/extension/1411/quake-mode/)** allows to trigger focus on specific pane on a specfic button press, need manual setup
 
 CLI-tools :
  - **[delta](https://github.com/dandavison/delta/)** enhanced `diff`
@@ -42,6 +42,11 @@ Install scripts are split in 3 for 3 reasons :
 cd install/scripts/
 ./install_tools.sh # will install apt pkg
 ./install_rust.sh  # will install rust and cargo its pkg manager
+
+# no need to add them to your .bashrc for now this is in the next step
+source "$HOME/.cargo/env"
+export PATH="$HOME/.cargo/bin:$PATH"
+
 ./install_cargo_tools.sh # will install the cargo binaries
 ```
 
@@ -55,5 +60,5 @@ sccache cargo pkg has apt pkg deps : openssl & pkg config, they are installed in
  - **helix**
  - **starship**
  
-2. **.setup_docker** contains most of the setup you will need, it acts as a .bashrc mostly useful when on a docker that has your `$HOME` mounted. You also can copy this file content into your .bashrc
+2. **.setup_docker** contains all the lines your bashrc should execute, its called setup_docker just bc i use it on my dockers. You can either execute it separately or this file content into your .bashrc to setup all the installed apps.
 
