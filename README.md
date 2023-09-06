@@ -41,16 +41,26 @@ echo "source $HOME/.cargo/env" >> ~.bashrc
 
 ### terminal and multiplexer
 
-- __Alacritty__
+#### Alacritty
 ```bash
 # alacritty needed system libraries
 apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
 cargo install alacritty
 ```
-- __Zellij__
+- [OPTIONNAL] copy my alacritty .dotfile to your ~/.config/ folder to have my setup instead of the default one
+```bash
+cp ./dotfiles/alacritty/ ~/.config/alacritty
+```
+
+#### Zellij
 ```bash
 cargo install --locked zellij
 ```
+- [OPTIONNAL] copy my zellij .dotfile to your ~/.config/ folder to have my setup instead of the default one
+```bash
+cp ./dotfiles/zellij/ ~/.config/zellij
+```
+
 ### installing the tools
 Install scripts are split in 3 for 3 reasons : 
 1. You need to install `rust` to use `cargo`, its package manager. Installing rust multiple times is useless.
@@ -75,6 +85,11 @@ sudo add-apt-repository ppa:maveonair/helix-editor
 sudo apt update
 sudo apt install helix
 ```
+- [OPTIONNAL] copy my helix .dotfile to your ~/.config/ folder to have my setup instead of the default one
+```bash
+cp ./dotfiles/helix/ ~/.config/helix
+```
+
 
 ### setup 
 1. copy the wanted `dotfiles`(located in the folder  ... dotfiles) in `$HOME/.config` to configure the utils that needs it.
