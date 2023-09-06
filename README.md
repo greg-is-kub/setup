@@ -32,21 +32,36 @@ Others :
 
 ## install
 
-### installing needed pkg
+### pre-requisite
+Many packages used here are hosted on `cargo`, rust's pkg manager. To install `cargo` you must first install `rust` : 
+```bash
+./install_rust.sh  # will install rust and cargo its pkg manager
+echo "source $HOME/.cargo/env" >> ~.bashrc
+```
+
+### terminal and multiplexer
+
+- __Alacritty__
+```bash
+# alacritty needed system libraries
+apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+cargo install alacritty
+```
+- __Zellij__
+```bash
+cargo install --locked zellij
+```
+### installing the tools
 Install scripts are split in 3 for 3 reasons : 
 1. You need to install `rust` to use `cargo`, its package manager. Installing rust multiple times is useless.
 2. `apt-get` needs `sudo` & `sudo cargo install` won't work properly.
 3. instaling w/ cargo will install in $HOME so if you are in a docker w/ `$HOME` mounted you don't need to reinstall them. You only need to reinstall the apt pkg.You will only need to add them in your path with `.setup_dockerrc` that mainly adds stuff to the `$PATH` and creates aliases.
 
 ```bash
-cd install/scripts/
-./install_tools.sh # will install apt pkg
-./install_rust.sh  # will install rust and cargo its pkg manager
-
-# no need to add them to your .bashrc for now this is in the next step
+cd install/
+sudo ./install_tools.sh # will install apt pkg
+# no need to add cargo to your .bashrc for now this is in the next step
 source "$HOME/.cargo/env"
-export PATH="$HOME/.cargo/bin:$PATH"
-
 ./install_cargo_tools.sh # will install the cargo binaries
 ```
 
@@ -60,5 +75,5 @@ sccache cargo pkg has apt pkg deps : openssl & pkg config, they are installed in
  - **helix**
  - **starship**
  
-2. **.setup_docker** contains all the lines your bashrc should execute, its called setup_docker just bc i use it on my dockers. You can either execute it separately or this file content into your .bashrc to setup all the installed apps.
+2. **.setup_docker** contains most of the setup you will need, it acts as a .bashrc mostly useful when on a docker that has your `$HOME` mounted. You also can copy this file content into your .bashrc
 
