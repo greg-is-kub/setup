@@ -24,5 +24,5 @@ echo "============================== installing ripgrep ========================
 apt-get install ripgrep
 
 # install starship
-echo "============================== installing starship ==============================="
+echo "============================== starship ==============================="
 curl -sS https://starship.rs/install.sh | sh

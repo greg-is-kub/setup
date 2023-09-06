@@ -22,6 +22,7 @@ ssh-add ~/.ssh/gitlab-ssh-cnes-fr
 eval "$(zoxide init bash)"
 # thefuck
 eval $(thefuck --alias FUCK)
+
 # starship prompt
 eval "$(starship init bash)"
 
