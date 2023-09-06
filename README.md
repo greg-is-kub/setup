@@ -68,6 +68,14 @@ source "$HOME/.cargo/env"
 >! Warning : 
 sccache cargo pkg has apt pkg deps : openssl & pkg config, they are installed in install-tools.sh hence you need to run these commands in this specific order.
 
+### Helix : code editor
+To install helix use the following commands : 
+```bash
+sudo add-apt-repository ppa:maveonair/helix-editor
+sudo apt update
+sudo apt install helix
+```
+
 ### setup 
 1. copy the wanted `dotfiles`(located in the folder  ... dotfiles) in `$HOME/.config` to configure the utils that needs it.
  - **zoxyde**
