@@ -14,8 +14,8 @@ Terminal :
  - **[gnome quake extension](https://extensions.gnome.org/extension/1411/quake-mode/)** allows to trigger focus on specific pane on a specfic button press, need manual setup
 
 CLI-tools :
- - **[delta](https://github.com/dandavison/delta/)** enhanced `diff`
- - **[thefuck](https://github.com/nvbn/thefuck)** corrects your input errors
+ - **[delta](https://github.com/dandavison/delta/)** enhanced `diff` that can be used to replace `git diff` as well
+ - **[thefuck](https://github.com/nvbn/thefuck)** corrects your input errors by suggestion
  - **[helix](https://github.com/helix-editor/)** code editor
      - **[clangd-12](https://github.com/clangd/clangd)** C lang LSP
      - TODO add marksman markdown LSP
@@ -78,17 +78,6 @@ source "$HOME/.cargo/env"
 >! Warning : 
 sccache cargo pkg has apt pkg deps : openssl & pkg config, they are installed in install-tools.sh hence you need to run these commands in this specific order.
 
-### Helix : code editor
-To install helix use the following commands : 
-```bash
-sudo add-apt-repository ppa:maveonair/helix-editor
-sudo apt update
-sudo apt install helix
-```
-- [OPTIONNAL] copy my helix .dotfile to your ~/.config/ folder to have my setup instead of the default one
-```bash
-cp ./dotfiles/helix/ ~/.config/helix
-```
 
 
 ### setup 
@@ -100,3 +89,14 @@ cp ./dotfiles/helix/ ~/.config/helix
  
 2. **.setup_docker** contains most of the setup you will need, it acts as a .bashrc mostly useful when on a docker that has your `$HOME` mounted. You also can copy this file content into your .bashrc
 
+### Helix : code editor
+To install helix use the following commands : 
+```bash
+sudo add-apt-repository ppa:maveonair/helix-editor
+sudo apt update
+sudo apt install helix
+```
+- [OPTIONNAL] copy my helix .dotfile to your ~/.config/ folder to have my setup instead of the default one
+```bash
+cp ./dotfiles/helix/ ~/.config/helix
+```

@@ -32,7 +32,7 @@ eval "$(atuin init bash)"
 
 # ALIASES
 ## ROS2
-alias cb='colcon build'
+alias cb='colcon build --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=1'
 alias cdnav='cd /workspace/robotique/ros2/Navigation-3D-Stack/'
 alias srcsetup='source install/setup.bash'
 
