@@ -25,8 +25,10 @@ runInTerminal = true
 
 [[language]]
 name = "c"
-language-server = {command = "clangd-12"}
+# language-server = {command = "clangd-12"}
+language-server = { command = "clangd-12", args=["--compile-commands-dir=*/build/"] }
 auto-format = true
+formatter = { command = "clang-format", args = ["-style=file:.clang-format"] }
 indent = { tab-width = 4, unit = "t" }
 
 [language.debugger]
@@ -63,3 +65,28 @@ name = "binary"
 [language.debugger.templates.args]
 program = "{0}"
 runInTerminal = true
+
+[[language]]
+name = "bash"
+language-server = { command = "bash-language-server"}
+formatter = { command = "shfmt" , args = ["-l","-w"]}
+auto-format = true
+
+[[language]]
+name = "python"
+language-server = { command = "pylsp"}
+formatter = { command = "black", args = ["--quiet", "-"] }
+auto-format = true
+
+[language.config.pylsp.plugins]
+pyflakes = {enabled = false}
+mccabe = {enabled = false}
+pyls_isort = {enabled = false}
+pycodestyle = {enabled = false, maxLineLength = 88}
+pydocstyle = {enabled = false}
+autopep8 = {enabled = false}
+yapf = {enabled = false}
+flake8 = {enabled = false}
+pylint = {enabled = false}
+ruff = {enabled = true, extendSelect = ["I"]}
+mypy = {enabled = true, live_mode = true, strict = true}
