@@ -25,7 +25,6 @@ runInTerminal = true
 
 [[language]]
 name = "c"
-# language-server = {command = "clangd-12"}
 language-server = { command = "clangd-12", args=["--compile-commands-dir=*/build/"] }
 auto-format = true
 formatter = { command = "clang-format", args = ["-style=file:.clang-format"] }
@@ -48,8 +47,10 @@ runInTerminal = true
 
 [[language]]
 name = "cpp"
-language-server = {command = "clangd"}
+language-server = { command = "clangd-12", args=["--compile-commands-dir=*/build/"] }
 auto-format = true
+formatter = { command = "clang-format", args = ["-style=file:.clang-format"] }
+indent = { tab-width = 4, unit = "t" }
 
 [language.debugger]
 command = "codelldb"
