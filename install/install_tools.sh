@@ -7,9 +7,6 @@ apt-get update
 chmod +x scripts/thefuck.sh
 ./scripts/thefuck.sh
 
-# install LSP
-echo "============================== installing clangd-12 ==============================="
-apt-get install -y clangd-12
 
 # install zoxide
 echo "============================== installing zoxide ==============================="
