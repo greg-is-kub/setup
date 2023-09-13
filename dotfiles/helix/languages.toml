@@ -27,7 +27,7 @@ runInTerminal = true
 name = "c"
 language-server = { command = "clangd-12", args=["--compile-commands-dir=*/build/"] }
 auto-format = true
-formatter = { command = "clang-format", args = ["-style=file:.clang-format"] }
+formatter = { command = "clang-format-12", args = ["-style=file:.clang-format"] }
 indent = { tab-width = 4, unit = "t" }
 
 [language.debugger]
@@ -49,7 +49,7 @@ runInTerminal = true
 name = "cpp"
 language-server = { command = "clangd-12", args=["--compile-commands-dir=*/build/"] }
 auto-format = true
-formatter = { command = "clang-format", args = ["-style=file:.clang-format"] }
+formatter = { command = "clang-format-12", args = ["-style=file:.clang-format"] }
 indent = { tab-width = 4, unit = "t" }
 
 [language.debugger]
