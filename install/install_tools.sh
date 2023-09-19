@@ -19,7 +19,3 @@ apt install -y bat
 #install ripgrep
 echo "============================== installing ripgrep ==============================="
 apt-get install ripgrep
-
-# install starship
-echo "============================== starship ==============================="
-curl -sS https://starship.rs/install.sh | sh
