@@ -11,6 +11,7 @@ Terminal :
  - **[Alacritty](https://github.com/alacritty/alacritty)** a good terminal **TODO**
  - **[zellij](https://github.com/zellij-org/zellij/)** terminal multiplexer like tmux but easy to use
  - **[starship](starship.rs/)** terminal prompt to make your term look fancy
+ - **[nerd-font](https://github.com/ryanoasis/nerd-fonts)** fancy font to go with startship NEED TO DO THE TUTORIAL (git clone --depth 1) **TODO**
  - **[gnome quake extension](https://extensions.gnome.org/extension/1411/quake-mode/)** allows to trigger focus on specific pane on a specfic button press, need manual setup
 
 CLI-tools :

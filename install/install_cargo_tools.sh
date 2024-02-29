@@ -18,8 +18,12 @@ cargo install atuin
 
 # install gitui
 echo "============================== installing gitui ==============================="
-cargo install gitui
+cargo install gitui --locked
 
 # install tokei 
 echo "============================== installing tokei ==============================="
-cargo install tokei
+cargo install tokei --locked
+
+# install zoxide
+echo "============================== installing zoxide ==============================="
+cargo install zoxide --locked

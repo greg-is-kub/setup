@@ -8,10 +8,6 @@ chmod +x scripts/thefuck.sh
 ./scripts/thefuck.sh
 
 
-# install zoxide
-echo "============================== installing zoxide ==============================="
-apt-get install -y zoxide
-
 #install bat
 echo "============================== installing bat ==============================="
 apt install -y bat

@@ -16,7 +16,7 @@ export ROS_DOMAIN_ID=69
 
 # allow git in docker 
 eval $(ssh-agent)
-ssh-add ~/.ssh/gitlab-ssh-cnes-fr
+# ssh-add ~/.ssh/<private keys>
 
 # zoxide, upgraded cd
 eval "$(zoxide init bash)"
