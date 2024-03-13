@@ -13,6 +13,7 @@ Terminal :
  - **[starship](starship.rs/)** terminal prompt to make your term look fancy
  - **[nerd-font](https://github.com/ryanoasis/nerd-fonts)** fancy font to go with startship NEED TO DO THE TUTORIAL (git clone --depth 1) **TODO**
  - **[gnome quake extension](https://extensions.gnome.org/extension/1411/quake-mode/)** allows to trigger focus on specific pane on a specfic button press, need manual setup
+ - **[gdb-dashboard](https://github.com/cyrus-and/gdb-dashboard)** Fancy dashboard for gdb written in python
 
 CLI-tools :
  - **[delta](https://github.com/dandavison/delta/)** enhanced `diff` that can be used to replace `git diff` as well
@@ -87,6 +88,8 @@ sccache cargo pkg has apt pkg deps : openssl & pkg config, they are installed in
  - **delta**
  - **helix**
  - **starship**
+
+ 2. For gdb dashboard just copy paste `.gdbinit` in `$HOME`
  
 2. **.setup_docker** contains most of the setup you will need, it acts as a .bashrc mostly useful when on a docker that has your `$HOME` mounted. You also can copy this file content into your .bashrc
 
