@@ -9,35 +9,36 @@ command = "rust-analyzer"
 
 [[language]]
 name = "c"
-language-servers =  ["clangd-12"]
+language-servers =  ["clangd"]
 auto-format = true
 formatter = { command = "clang-format-12", args = ["-style=file"] }
 indent = { tab-width = 4, unit = "t" }
 
 [[language]]
 name = "cpp"
-language-servers =  ["clangd-12"]
-auto-format = true
-formatter = { command = "clang-format-12", args = ["-style=file"] }
+language-servers =  ["clangd"]
+auto-format = false
 indent = { tab-width = 4, unit = "t" }
-[language-servers.clangd-12]
-command = "clangd-12"
-args=["--compile-commands-dir=*/build/"] 
+formatter = { command = "clang-format-12", args = ["-style=file"] }
+comment-token = "//"
+[language-server.clangd]
+command = "clangd"
+args=["--compile-commands-dir=./build_bundle_cpp"] 
 
 [[language]]
 name = "bash"
 language-servers = ["bash-language-server"]
 formatter = { command = "shfmt" , args = ["-l","-w"]}
 auto-format = true
-[language-servers.bash-language-server]
+[language-server.bash-language-server]
 command = "bash-language-server"
 
 [[language]]
 name = "python"
 language-servers = ["pylsp"]
 formatter = { command = "black", args = ["--quiet", "-"] }
-auto-format = true
-[language-servers.pylsp.plugins]
+auto-format = false
+[language-server.pylsp.plugins]
 pyflakes = {enabled = false}
 mccabe = {enabled = false}
 pyls_isort = {enabled = false}

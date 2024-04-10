@@ -1,4 +1,5 @@
-theme = "darcula" 
+theme = "solarized_light" 
+# theme = "darcula" 
 
 [editor]
 line-number = "relative"

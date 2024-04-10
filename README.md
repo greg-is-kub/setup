@@ -29,8 +29,10 @@ CLI-tools :
  - **[bat](https://github.com/sharkdp/bat)** enhanced cat command
  - **[ripgrep](https://github.com/BurntSushi/ripgrep)** enhanced grep command
 
+**TO DO**
 Others : 
  - **[sccache](https://crates.io/crates/sccache)** to speed up rust compilation **TODO**
+ - **[ble.sh](https://github.com/akinomyoga/ble.sh)** auto suggestion for terminal
 
 ## install
 
