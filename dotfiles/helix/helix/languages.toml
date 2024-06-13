@@ -35,9 +35,16 @@ command = "bash-language-server"
 
 [[language]]
 name = "python"
-language-servers = ["pylsp"]
-formatter = { command = "black", args = ["--quiet", "-"] }
-auto-format = false
+language-servers = [ "pylsp", "ruff-lsp" ]
+auto-format = true
+
+[language.formatter]
+command="ruff"
+args=["format","-","-q"]
+lineLength = 80
+
+[language-server.ruff-lsp]
+command = "ruff-lsp"
 [language-server.pylsp.plugins]
 pyflakes = {enabled = false}
 mccabe = {enabled = false}
