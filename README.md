@@ -7,32 +7,30 @@ This whole git is meant to be used also for dockers that have `$HOME` mounted.
 
 contains scripts to automatically install my fav utils
 
-Terminal : 
+### Terminal configuration : 
  - **[Alacritty](https://github.com/alacritty/alacritty)** a good terminal **TODO**
  - **[zellij](https://github.com/zellij-org/zellij/)** terminal multiplexer like tmux but easy to use
  - **[starship](starship.rs/)** terminal prompt to make your term look fancy
  - **[nerd-font](https://github.com/ryanoasis/nerd-fonts)** fancy font to go with startship NEED TO DO THE TUTORIAL (git clone --depth 1) **TODO**
- - **[gnome quake extension](https://extensions.gnome.org/extension/1411/quake-mode/)** allows to trigger focus on specific pane on a specfic button press, need manual setup
  - **[gdb-dashboard](https://github.com/cyrus-and/gdb-dashboard)** Fancy dashboard for gdb written in python
+ - **[ipdb](https://pypi.org/project/ipdb/)** Better python debugger
 
-CLI-tools :
+#### CLI-tools :
  - **[delta](https://github.com/dandavison/delta/)** enhanced `diff` that can be used to replace `git diff` as well
  - **[thefuck](https://github.com/nvbn/thefuck)** corrects your input errors by suggestion
  - **[helix](https://github.com/helix-editor/)** code editor
-     - **[clangd-12](https://github.com/clangd/clangd)** C lang LSP
-     - TODO add marksman markdown LSP
- - **[atuin](https://github.com/ellie/atuin)** replaces your ctr + r and history with fuzzy finder
  - **[gitui](https://github.com/extrawurst/gitui)** git gui allowing line-by-line commits, very efficient, very useful
- - **[tokei](https://github.com/XAMPPRocky/tokei)** to know how many lines of codes a specific repo contains
  - **[lsd](https://github.com/Peltoche/lsd)** enhanced ls command
  - **[zoxide](https://github.com/ajeetdsouza/zoxide)** enhanced cd command
  - **[bat](https://github.com/sharkdp/bat)** enhanced cat command
  - **[ripgrep](https://github.com/BurntSushi/ripgrep)** enhanced grep command
+ - **[fzf](https://github.com/junegunn/fzf)** Fuzzy file finder **TODO**
+ - **[yazi](https://github.com/sxyazi/yazi)** Simple file finder **TODO**
+ - **[serpl](https://github.com/yassinebridi/serpl)** Simple find & replace tool **TODO**
+ - **[tokei](https://github.com/XAMPPRocky/tokei)** to know how many lines of codes a specific repo contains
 
-**TO DO**
-Others : 
- - **[sccache](https://crates.io/crates/sccache)** to speed up rust compilation **TODO**
- - **[ble.sh](https://github.com/akinomyoga/ble.sh)** auto suggestion for terminal
+### LSP
+- **[clangd](https://github.com/clangd/clangd)** C lang LSP
 
 ## install
 
