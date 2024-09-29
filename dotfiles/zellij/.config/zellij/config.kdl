@@ -188,6 +188,19 @@ keybinds {
     shared_except "tmux" "locked" {
         bind "Ctrl b" { SwitchToMode "Tmux"; }
     }
+
+    ///////////////////////////////////////////////////////////////
+    ///////////////////////////////// PLUGINS
+
+    ///// ROOM
+    shared_except "locked" {
+        bind "Ctrl y" {
+            LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
+                floating true
+                ignore_case true
+            }
+        }
+    }
 }
 
 plugins {
@@ -361,3 +374,6 @@ unbind "]"
 // Default: true
 //
 // styled_underlines false
+
+
+
