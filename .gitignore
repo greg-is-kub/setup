@@ -1,0 +1,2 @@
+# Avoid pushing zellij plugis to make it lighter
+dotfiles/zellij/.config/zellij/plugins

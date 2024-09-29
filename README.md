@@ -101,3 +101,7 @@ bat append_bashrc >> .bashrc
 ### Helix : code editor
 [Tutorial to install helix](https://docs.helix-editor.com/install.html)
 > Note: you can also use my helix config, set it up using stow as just shown above
+
+### Zellij plugins
+They are voluntarily taken of the repo to keep it lightweight. List of plugins to install : 
+- [rooms](https://github.com/rvcas/room)
