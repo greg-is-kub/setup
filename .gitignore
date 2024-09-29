@@ -1,2 +1,5 @@
 # Avoid pushing zellij plugis to make it lighter
 dotfiles/zellij/.config/zellij/plugins
+
+# If building helix from source you will need to link runtime
+dotfiles/helix/.config/helix/runtime
