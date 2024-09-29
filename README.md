@@ -83,23 +83,21 @@ sccache cargo pkg has apt pkg deps : openssl & pkg config, they are installed in
 
 
 ### setup 
-1. Use [stow](https://www.gnu.org/software/stow/manual/stow.html#Introduction) to automatically the wanted `dotfiles`(located in the folder  ... `./dotfiles/`) in `$HOME/.config` to configure the utils that needs it.
+#### Copy .files using [stow](https://www.gnu.org/software/stow/manual/stow.html#Introduction) 
+Use [stow](https://www.gnu.org/software/stow/manual/stow.html#Introduction) to create symlinks from `dotfiles/*` to your config files (mostly goes to ~/.config except for gdb) to configure the utils that need it.
+```bash
+apt install stow
+```
 ```bash
 cd
-stow -d <path/to/this/repo/dotfiles> -t . <pkg_name>
+stow -d <path/to/this/repo>/dotfiles -t . <pkg_name>
 ```
-with `pkg_name` one of the folders located in `./dotfiles`
+with `pkg_name` one being one the folders located in `./dotfiles`
  
-2. **.setup_docker** contains most of the setup you will need, it acts as a .bashrc mostly useful when on a docker that has your `$HOME` mounted. You also can copy this file content into your .bashrc
-
+2. **.append_bashrc** contains most of the setup you will need, you just need to append it to your `.bashrc`
+```bash
+bat append_bashrc >> .bashrc
+```
 ### Helix : code editor
-To install helix use the following commands : 
-```bash
-sudo add-apt-repository ppa:maveonair/helix-editor
-sudo apt update
-sudo apt install helix
-```
-- [OPTIONNAL] copy my helix .dotfile to your ~/.config/ folder to have my setup instead of the default one
-```bash
-cp ./dotfiles/helix/ ~/.config/helix
-```
+[Tutorial to install helix](https://docs.helix-editor.com/install.html)
+> Note: you can also use my helix config, set it up using stow as just shown above
