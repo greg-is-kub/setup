@@ -1,4 +1,4 @@
-# zoxide, upgraded cd
+# zoxide
 eval "$(zoxide init bash)"
 # thefuck
 eval $(thefuck --alias FUCK)
@@ -6,11 +6,10 @@ eval $(thefuck --alias FUCK)
 # starship prompt
 eval "$(starship init bash)"
 
-#Helix set as editor
+#Helix set as default editor
 export EDITOR=/home/greg/.cargo/bin/hx
 
 # FZF
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # ALIASES

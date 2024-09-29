@@ -83,13 +83,12 @@ sccache cargo pkg has apt pkg deps : openssl & pkg config, they are installed in
 
 
 ### setup 
-1. copy the wanted `dotfiles`(located in the folder  ... dotfiles) in `$HOME/.config` to configure the utils that needs it.
- - **zoxyde**
- - **delta**
- - **helix**
- - **starship**
-
- 2. For gdb dashboard just copy paste `.gdbinit` in `$HOME`
+1. Use stow to automatically the wanted `dotfiles`(located in the folder  ... `./dotfiles/`) in `$HOME/.config` to configure the utils that needs it.
+```bash
+cd
+stow -d <path/to/this/repo/dotfiles> -t . <pkg_name>
+```
+with `pkg_name` one of the folders located in `./dotfiles`
  
 2. **.setup_docker** contains most of the setup you will need, it acts as a .bashrc mostly useful when on a docker that has your `$HOME` mounted. You also can copy this file content into your .bashrc
 
