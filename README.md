@@ -83,7 +83,7 @@ sccache cargo pkg has apt pkg deps : openssl & pkg config, they are installed in
 
 
 ### setup 
-1. Use stow to automatically the wanted `dotfiles`(located in the folder  ... `./dotfiles/`) in `$HOME/.config` to configure the utils that needs it.
+1. Use [stow](https://www.gnu.org/software/stow/manual/stow.html#Introduction) to automatically the wanted `dotfiles`(located in the folder  ... `./dotfiles/`) in `$HOME/.config` to configure the utils that needs it.
 ```bash
 cd
 stow -d <path/to/this/repo/dotfiles> -t . <pkg_name>
