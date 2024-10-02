@@ -194,7 +194,7 @@ keybinds {
 
     ///// ROOM
     shared_except "locked" {
-        bind "Ctrl y" {
+        bind "Ctrl r" {
             LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
                 floating true
                 ignore_case true
