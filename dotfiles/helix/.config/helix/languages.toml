@@ -9,21 +9,22 @@ command = "rust-analyzer"
 
 [[language]]
 name = "c"
-language-servers =  ["clangd-12"]
-auto-format = true
-formatter = { command = "clang-format-12", args = ["-style=file"] }
-indent = { tab-width = 4, unit = "t" }
+language-servers =  ["clangd-20"]
+auto-format = false
+formatter = { command = "clang-format-20", args = ["--style=file"] }
+indent = { tab-width = 4, unit = " " }
 
 [[language]]
 name = "cpp"
-language-servers =  ["clangd-12"]
-auto-format = true
+language-servers =  ["clangd-20"]
+auto-format = false
 indent = { tab-width = 4, unit = "t" }
-formatter = { command = "clang-format-12", args = ["-style=file"] }
+formatter = { command = "clang-format-20", args = ["--style=file"] }
 comment-token = "//"
-[language-server.clangd-12]
-command = "clangd-12"
-args=["--compile-commands-dir=*/build/"] 
+
+[language-server.clangd-20]
+command = "clangd-20"
+args=["--compile-commands-dir=./build_bundle_cpp"] 
 
 [[language]]
 name = "bash"
@@ -35,18 +36,11 @@ command = "bash-language-server"
 
 [[language]]
 name = "python"
-language-servers = ["pylsp"]
-formatter = { command = "black", args = ["--quiet", "-"] }
-auto-format = true
-[language-server.pylsp.plugins]
-pyflakes = {enabled = false}
-mccabe = {enabled = false}
-pyls_isort = {enabled = false}
-pycodestyle = {enabled = false, maxLineLength = 88}
-pydocstyle = {enabled = false}
-autopep8 = {enabled = false}
-yapf = {enabled = false}
-flake8 = {enabled = false}
-pylint = {enabled = false}
-ruff = {enabled = true, extendSelect = ["I"]}
-mypy = {enabled = true, live_mode = true, strict = true}
+language-servers = [ "pylsp" ]
+auto-format = false
+
+[language-server.pylsp]
+command = "pylsp"
+[language-server.pylsp.config.pylsp]
+mypy = {enabled = true, live_mode = true, strict = false}
+ruff = {enabled = true, formatEnabled = true}
