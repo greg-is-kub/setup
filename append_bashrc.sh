@@ -1,3 +1,11 @@
+
+
+################################################# 
+# This part of .bashrc was automaticallly added 
+# by append_bashrc.sh from
+# https://github.com/greg-is-kub/setup
+
+
 # zoxide
 eval "$(zoxide init bash)"
 
@@ -5,7 +13,7 @@ eval "$(zoxide init bash)"
 eval "$(starship init bash)"
 
 #Helix set as default editor
-export EDITOR=/home/greg/.cargo/bin/hx
+export EDITOR=$HOME/.cargo/bin/hx
 
 # FZF
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
