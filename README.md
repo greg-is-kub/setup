@@ -17,7 +17,6 @@ contains scripts to automatically install my fav utils
 
 #### CLI-tools :
  - **[delta](https://github.com/dandavison/delta/)** enhanced `diff` that can be used to replace `git diff` as well
- - **[thefuck](https://github.com/nvbn/thefuck)** corrects your input errors by suggestion
  - **[helix](https://github.com/helix-editor/)** code editor
  - **[gitui](https://github.com/extrawurst/gitui)** git gui allowing line-by-line commits, very efficient, very useful
  - **[lsd](https://github.com/Peltoche/lsd)** enhanced ls command
