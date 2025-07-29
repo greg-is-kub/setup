@@ -19,3 +19,8 @@ cargo install tokei --locked
 # install zoxide
 echo "============================== installing zoxide ==============================="
 cargo install zoxide --locked
+
+# install zellij
+echo "============================== installing zellij ==============================="
+cargo install zellij --locked
+
