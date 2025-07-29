@@ -1,7 +1,5 @@
 # zoxide
 eval "$(zoxide init bash)"
-# thefuck
-eval $(thefuck --alias FUCK)
 
 # starship prompt
 eval "$(starship init bash)"
@@ -30,5 +28,4 @@ source "$HOME/.cargo/env"
 export PATH="$HOME/.cargo/bin:$PATH"
 # GO
 export PATH=$PATH:/usr/local/go/bin
-
 

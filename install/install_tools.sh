@@ -4,9 +4,6 @@
 DST_USER=/home/grkubl
 
 apt-get update
-chmod +x scripts/thefuck.sh
-./scripts/thefuck.sh
-
 
 #install bat
 echo "============================== installing bat ==============================="
