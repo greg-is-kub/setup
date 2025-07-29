@@ -8,10 +8,10 @@ This whole git is meant to be used also for dockers that have `$HOME` mounted.
 contains scripts to automatically install my fav utils
 
 ### Terminal configuration : 
- - **[Alacritty](https://github.com/alacritty/alacritty)** a good terminal **TODO**
+ - **[Alacritty](https://github.com/alacritty/alacritty)** a good terminal (install through flathub)
  - **[zellij](https://github.com/zellij-org/zellij/)** terminal multiplexer like tmux but easy to use
  - **[starship](starship.rs/)** terminal prompt to make your term look fancy
- - **[nerd-font](https://github.com/ryanoasis/nerd-fonts)** fancy font to go with startship NEED TO DO THE TUTORIAL (git clone --depth 1) **TODO**
+ - **[nerd-font](https://github.com/ryanoasis/nerd-fonts)** fancy font to go with startship
  - **[gdb-dashboard](https://github.com/cyrus-and/gdb-dashboard)** Fancy dashboard for gdb written in python
  - **[ipdb](https://pypi.org/project/ipdb/)** Better python debugger
 
@@ -27,6 +27,7 @@ contains scripts to automatically install my fav utils
  - **[yazi](https://github.com/sxyazi/yazi)** Simple file finder **TODO**
  - **[serpl](https://github.com/yassinebridi/serpl)** Simple find & replace tool **TODO**
  - **[tokei](https://github.com/XAMPPRocky/tokei)** to know how many lines of codes a specific repo contains
+ - **[glow](https://github.com/charmbracelet/glow)** A Markdown visualizer & editor
 
 ### LSP
 - **[clangd](https://github.com/clangd/clangd)** C lang LSP
@@ -48,9 +49,25 @@ echo "source $HOME/.cargo/env" >> ~.bashrc
 apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
 cargo install alacritty
 ```
-- [OPTIONNAL] copy my alacritty .dotfile to your ~/.config/ folder to have my setup instead of the default one
+> [OPTIONNAL] copy my alacritty .dotfile to your ~/.config/ folder to have my setup instead of the default one
+> **WARNING :** A nerdfont is defined in the config file for alacritty. It will sureliy break your terminal view if not setup.
+> Go to next step (install nerdfont) to solve it
+
 ```bash
 cp ./dotfiles/alacritty/ ~/.config/alacritty
+```
+#### Install nerd font
+Use [nerd font installer](https://github.com/officialrajdeepsingh/nerd-fonts-installer) to install the font you want (go to official site to see their preview).
+Then selected the terminal font in ~/.config/alacritty.toml in the section `[font]`:
+> **TIP :** to see the exact font name, find your font using `fc-list` in bash.
+```toml
+[font]
+style = "Regular"
+size = 11.0
+
+[font.normal]
+family = "GohuFont 11 Nerd Font Mono"
+style = "Regular"
 ```
 
 #### Zellij

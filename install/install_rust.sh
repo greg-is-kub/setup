@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 DST_USER=/home/grkubl
 
