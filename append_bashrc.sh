@@ -29,3 +29,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # GO
 export PATH=$PATH:/usr/local/go/bin
 
+# Setup Brew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
