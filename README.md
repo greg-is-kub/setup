@@ -12,6 +12,13 @@ contains scripts to automatically install my fav utils
  - **[zellij](https://github.com/zellij-org/zellij/)** terminal multiplexer like tmux but easy to use
  - **[starship](starship.rs/)** terminal prompt to make your term look fancy
  - **[nerd-font](https://github.com/ryanoasis/nerd-fonts)** fancy font to go with startship
+
+### Language related pkg
+#### build
+ - [git](https://git-scm.com/) nothing to present here
+ - [uv](https://docs.astral.sh/uv/), the goto tool for python that replaces `pip`, `pip-tools`, `pipx`, `poetry`, `pyenv`, `twine`, `virtualenv`, and more.
+
+#### Debuggers
  - **[gdb-dashboard](https://github.com/cyrus-and/gdb-dashboard)** Fancy dashboard for gdb written in python
  - **[ipdb](https://pypi.org/project/ipdb/)** Better python debugger
 
