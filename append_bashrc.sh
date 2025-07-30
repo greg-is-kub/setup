@@ -16,7 +16,8 @@ eval "$(starship init bash)"
 export EDITOR=$HOME/.cargo/bin/hx
 
 # FZF
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# Set up key bindings and fuzzy completion
+eval "$(fzf --bash)"
 
 # ALIASES
 ## LSD
