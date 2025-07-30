@@ -40,3 +40,5 @@ export PATH=$PATH:/usr/local/go/bin
 # Setup Brew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+# setup uv
+source $HOME/.local/share/../bin/env
