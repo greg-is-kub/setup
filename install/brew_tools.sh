@@ -9,3 +9,7 @@ brew install glow
 #install gitui
 echo "============================== installing gitui ==============================="
 brew install gitui
+
+#install fzf
+echo "============================== installing fzf ==============================="
+brew install fzf

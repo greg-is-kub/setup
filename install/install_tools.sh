@@ -12,7 +12,3 @@ apt install -y bat
 #install ripgrep
 echo "============================== installing ripgrep ==============================="
 apt-get install ripgrep
-
-#install fzf
-echo "============================== installing fzf ==============================="
-apt-get install fzf
