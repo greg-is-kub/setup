@@ -6,18 +6,28 @@
 # https://github.com/greg-is-kub/setup
 
 
+## append to $PATH
+# RUST & CARGO
+source "$HOME/.cargo/env"
+export PATH="$HOME/.cargo/bin:$PATH"
+# GO
+export PATH=$PATH:/usr/local/go/bin
+# Setup Brew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# setup uv
+source $HOME/.local/share/../bin/env
+
+## setup tools
 # zoxide
 eval "$(zoxide init bash)"
-
 # starship prompt
 eval "$(starship init bash)"
 
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
 #Helix set as default editor
 export EDITOR=$HOME/.cargo/bin/hx
-
-# FZF
-# Set up key bindings and fuzzy completion
-eval "$(fzf --bash)"
 
 # ALIASES
 ## LSD
@@ -31,15 +41,3 @@ alias bat='bat -p'
 ## PYTHON
 alias py="python"
 
-## append to $PATH
-# RUST & CARGO
-source "$HOME/.cargo/env"
-export PATH="$HOME/.cargo/bin:$PATH"
-# GO
-export PATH=$PATH:/usr/local/go/bin
-
-# Setup Brew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# setup uv
-source $HOME/.local/share/../bin/env
