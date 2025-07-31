@@ -13,3 +13,8 @@ brew install gitui
 #install fzf
 echo "============================== installing fzf ==============================="
 brew install fzf
+
+# install carapace
+echo "============================== installing carapace ==============================="
+brew tap rsteube/homebrew-tap
+brew install rsteube/tap/carapace
