@@ -22,9 +22,11 @@ source $HOME/.local/share/../bin/env
 eval "$(zoxide init bash)"
 # starship prompt
 eval "$(starship init bash)"
-
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
+# carapace completer
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+source <(carapace _carapace)
 
 #Helix set as default editor
 export EDITOR=$HOME/.cargo/bin/hx
