@@ -3,3 +3,6 @@ dotfiles/zellij/.config/zellij/plugins
 
 # If building helix from source you will need to link runtime
 dotfiles/helix/.config/helix/runtime
+
+# clangd.sh artefact
+./install/LSP/llvm.sh
