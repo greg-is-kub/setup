@@ -37,8 +37,11 @@ contains scripts to automatically install my fav utils
  - **[glow](https://github.com/charmbracelet/glow)** A Markdown visualizer & editor
 
 ### LSP
-- **[clangd](https://github.com/clangd/clangd)** C lang LSP
-
+- **C++**
+ - [clangd](https://github.com/clangd/clangd) C lang LSP
+ - [bear](https://github.com/rizsotto/Bear) a tool to replace make & generate `compile_commands.json` from a MakeFile
+- **python**
+ - TODO
 ## install
 
 ### pre-requisite
