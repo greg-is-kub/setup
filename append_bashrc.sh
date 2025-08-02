@@ -5,6 +5,8 @@
 # by append_bashrc.sh from
 # https://github.com/greg-is-kub/setup
 
+#Helix set as default editor
+export EDITOR=$HOME/.cargo/bin/hx
 
 ## append to $PATH
 # RUST & CARGO
@@ -16,20 +18,6 @@ export PATH=$PATH:/usr/local/go/bin
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # setup uv
 source $HOME/.local/share/../bin/env
-
-## setup tools
-# zoxide
-eval "$(zoxide init bash)"
-# starship prompt
-eval "$(starship init bash)"
-# Set up fzf key bindings and fuzzy completion
-eval "$(fzf --bash)"
-# carapace completer
-export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
-source <(carapace _carapace)
-
-#Helix set as default editor
-export EDITOR=$HOME/.cargo/bin/hx
 
 # ALIASES
 ## LSD
@@ -45,3 +33,14 @@ alias py="python"
 # bear
 alias bear='bear --output ./build/compile_commands.json'
 
+## setup tools
+# starship prompt
+eval "$(starship init bash)"
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+# carapace completer
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+source <(carapace _carapace)
+
+# zoxide
+eval "$(zoxide init bash)"
