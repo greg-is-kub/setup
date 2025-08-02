@@ -18,3 +18,7 @@ brew install fzf
 echo "============================== installing carapace ==============================="
 brew tap rsteube/homebrew-tap
 brew install rsteube/tap/carapace
+
+# install tldr
+echo "============================== installing tldr ==============================="
+brew install tlrc
