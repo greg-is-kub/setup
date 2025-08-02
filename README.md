@@ -31,18 +31,19 @@ contains scripts to automatically install my fav utils
  - **[zoxide](https://github.com/ajeetdsouza/zoxide)** enhanced cd command
  - **[bat](https://github.com/sharkdp/bat)** enhanced cat command
  - **[ripgrep](https://github.com/BurntSushi/ripgrep)** enhanced grep command
- - **[fzf](https://github.com/junegunn/fzf)** Fuzzy file finder **TODO**
- - **[yazi](https://github.com/sxyazi/yazi)** Simple file finder **TODO**
- - **[serpl](https://github.com/yassinebridi/serpl)** Simple find & replace tool **TODO**
+ - **[fzf](https://github.com/junegunn/fzf)** Fuzzy file finder
+ - **[yazi](https://github.com/sxyazi/yazi)** handy file explorer
+ - **[serpl](https://github.com/yassinebridi/serpl)** Simple find & replace tool
  - **[tokei](https://github.com/XAMPPRocky/tokei)** to know how many lines of codes a specific repo contains
+ - **[tldr](https://github.com/tldr-pages/tldr)** easy collaborative command documentation with hands on examples
  - **[glow](https://github.com/charmbracelet/glow)** A Markdown visualizer & editor
 
 ### LSP
 - **C++**
- - [clangd](https://github.com/clangd/clangd) C lang LSP
- - [bear](https://github.com/rizsotto/Bear) a tool to replace make & generate `compile_commands.json` from a MakeFile
+    - [clangd](https://github.com/clangd/clangd) C lang LSP
+    - [bear](https://github.com/rizsotto/Bear) a tool to replace make & generate `compile_commands.json` from a MakeFile
 - **python**
- - TODO
+    - TODO
 ## install
 
 ### pre-requisite
