@@ -1,4 +1,3 @@
-live_config_reload = true
 
 [colors.bright]
 black = "#6272a4"
@@ -66,10 +65,13 @@ TERM = "alacritty"
 size = 11.0
 
 [font.normal]
-family = "JetBrains Mono Nerd Font"
-# style = "Regular"
+family = "GohuFont 11 Nerd Font Mono"
+style = "Regular"
 
 [window]
 decorations = "none"
 dynamic_padding = false
-opacity = 0.99
+opacity = 0.92
+
+[general]
+live_config_reload = true
