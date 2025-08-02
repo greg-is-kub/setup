@@ -46,17 +46,10 @@ contains scripts to automatically install my fav utils
 ## install
 
 ### pre-requisite
-All pkg used here are not hosted by apt, you will need to install the `cargo` & `brew` pkg managers.
+All pkg used here are not hosted by apt, you will need to install the `cargo`, `brew` & `uv` pkg managers.
 
-rust :
 ```bash
-./install_rust.sh  # will install rust and cargo its pkg manager
-echo "source $HOME/.cargo/env" >> ~.bashrc
-```
-brew :
-```bash
-./install_brew.sh
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+./install/pkg_managers.sh # will install rust and cargo its pkg manager
 ```
 
 ### terminal and multiplexer
