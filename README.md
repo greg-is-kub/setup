@@ -43,7 +43,9 @@ contains scripts to automatically install my fav utils
     - [clangd](https://github.com/clangd/clangd) C lang LSP
     - [bear](https://github.com/rizsotto/Bear) a tool to replace make & generate `compile_commands.json` from a MakeFile
 - **python**
-    - TODO
+    - [pyrefly](https://pyrefly.org/) static type check
+    - [pylsp](https://github.com/python-lsp/python-lsp-server) python lsp
+    - [ruff](https://docs.astral.sh/ruff/) python lsp & formatter
 ## install
 
 ### pre-requisite

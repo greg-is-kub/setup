@@ -36,11 +36,16 @@ command = "bash-language-server"
 
 [[language]]
 name = "python"
-language-servers = [ "pylsp" ]
+language-servers = [ "pylsp", "ruff", "pyrefly" ]
+formatter = { command = "ruff", args = ["format", "--line-length", "88", "-"] }
 auto-format = false
 
 [language-server.pylsp]
 command = "pylsp"
-[language-server.pylsp.config.pylsp]
-mypy = {enabled = true, live_mode = true, strict = false}
-ruff = {enabled = true, formatEnabled = true}
+
+[language-server.ruff]
+command = "ruff-lsp"
+
+[language-server.pyrefly]
+command = "pyrefly"
+args = ["lsp"]
