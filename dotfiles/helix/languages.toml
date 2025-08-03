@@ -1,0 +1,50 @@
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer" ]
+formatter = { command = "rustfmt" }
+auto-format = true
+indent = { tab-width = 4, unit = "t" }
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[[language]]
+name = "c"
+language-servers =  ["clangd-20"]
+auto-format = false
+formatter = { command = "clang-format-20", args = ["--style=file"] }
+indent = { tab-width = 4, unit = " " }
+
+[[language]]
+name = "cpp"
+language-servers =  ["clangd-20"]
+auto-format = false
+indent = { tab-width = 4, unit = "t" }
+formatter = { command = "clang-format-20", args = ["--style=file"] }
+comment-token = "//"
+
+[language-server.clangd-20]
+command = "clangd-20"
+args=["--compile-commands-dir=./build_bundle_cpp"] 
+
+[[language]]
+name = "bash"
+language-servers = ["bash-language-server"]
+formatter = { command = "shfmt" , args = ["-l","-w"]}
+auto-format = true
+[language-server.bash-language-server]
+command = "bash-language-server"
+
+[[language]]
+name = "python"
+language-servers = [ "pylsp", "ruff", "pyrefly" ]
+auto-format = false
+
+[language-server.ruff]
+command = "ruff-lsp"
+
+[language-server.pylsp]
+command = "pylsp"
+
+[language-server.pyrefly]
+command = "pyrefly"
+args = ["lsp"]
