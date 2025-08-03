@@ -2,4 +2,4 @@
 set -e
 
 # git
-sudo apt install git ninja-build cmake curl
+sudo apt install git ninja-build cmake curl meld
