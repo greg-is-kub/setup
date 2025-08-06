@@ -29,8 +29,9 @@ args=["--compile-commands-dir=./build_bundle_cpp"]
 [[language]]
 name = "bash"
 language-servers = ["bash-language-server"]
-formatter = { command = "shfmt" , args = ["-l","-w"]}
+formatter = { command = "shfmt" , args = ["-i","4"]}
 auto-format = true
+
 [language-server.bash-language-server]
 command = "bash-language-server"
 
