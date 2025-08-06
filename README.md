@@ -4,7 +4,6 @@ This whole git is meant to be used also for dockers that have `$HOME` mounted.
 
 # summary
 ## packages that will be installed
-
 contains scripts to automatically install my fav utils
 
 ### Terminal configuration : 
@@ -46,31 +45,25 @@ contains scripts to automatically install my fav utils
     - [pyrefly](https://pyrefly.org/) static type check
     - [pylsp](https://github.com/python-lsp/python-lsp-server) python lsp
     - [ruff](https://docs.astral.sh/ruff/) python lsp & formatter
-## install
+# install
 
-### pre-requisite
+## pre-requisite
 All pkg used here are not hosted by apt, you will need to install the `cargo`, `brew` & `uv` pkg managers.
 
 ```bash
 ./install/pkg_managers.sh # will install rust and cargo its pkg manager
 ```
 
-### terminal and multiplexer
+## terminal setup and multiplexer
 
-#### Alacritty
+### Alacritty
 ```bash
 # alacritty needed system libraries
 apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
 cargo install alacritty
 ```
-> [OPTIONNAL] copy my alacritty .dotfile to your ~/.config/ folder to have my setup instead of the default one
-> **WARNING :** A nerdfont is defined in the config file for alacritty. It will sureliy break your terminal view if not setup.
-> Go to next step (install nerdfont) to solve it
 
-```bash
-cp ./dotfiles/alacritty/ ~/.config/alacritty
-```
-#### Install nerd font
+### Install nerd font
 Use [nerd font installer](https://github.com/officialrajdeepsingh/nerd-fonts-installer) to install the font you want (go to official site to see their preview).
 Then selected the terminal font in ~/.config/alacritty.toml in the section `[font]`:
 > **TIP :** to see the exact font name, find your font using `fc-list` in bash.
@@ -84,7 +77,7 @@ family = "GohuFont 11 Nerd Font Mono"
 style = "Regular"
 ```
 
-#### Zellij
+### Zellij
 ```bash
 cargo install --locked zellij
 ```
@@ -93,8 +86,8 @@ cargo install --locked zellij
 cp ./dotfiles/zellij/ ~/.config/zellij
 ```
 
-### installing the tools
-Install scripts are split in 3 for 3 reasons : 
+## installing the tools
+Install scripts are split as of now. 
 1. You need to install `rust` to use `cargo`, its package manager. Installing rust multiple times is useless.
 2. `apt-get` needs `sudo` & `sudo cargo install` won't work properly.
 3. instaling w/ cargo will install in $HOME so if you are in a docker w/ `$HOME` mounted you don't need to reinstall them. You only need to reinstall the apt pkg.You will only need to add them in your path with `.setup_dockerrc` that mainly adds stuff to the `$PATH` and creates aliases.
@@ -110,11 +103,22 @@ source "$HOME/.cargo/env"
 >! Warning : 
 sccache cargo pkg has apt pkg deps : openssl & pkg config, they are installed in install-tools.sh hence you need to run these commands in this specific order.
 
+### Helix : code editor
+[Tutorial to install helix](https://docs.helix-editor.com/install.html)
+> Note: you can also use my helix config, set it up using stow as just shown below
 
+### Zellij plugins
+They are voluntarily taken of the repo to keep it lightweight. List of plugins to install : 
+- [rooms](https://github.com/rvcas/room)
 
 ### setup 
 #### Copy .files using [stow](https://www.gnu.org/software/stow/manual/stow.html#Introduction) 
 Use [stow](https://www.gnu.org/software/stow/manual/stow.html#Introduction) to create symlinks from `dotfiles/*` to your config files (mostly goes to ~/.config except for gdb) to configure the utils that need it.
+
+> [!warning]
+> A nerdfont is defined in the config file for alacritty. If you copy my config with `stow`, it will surely break your terminal view if not setup.
+> Go to next step (install nerdfont) to solve it or modify the entry in `.config/alacritty.toml`.
+
 ```bash
 apt install stow
 ```
@@ -122,16 +126,9 @@ apt install stow
 cd
 stow -d <path/to/this/repo>/dotfiles -t . <pkg_name>
 ```
-with `pkg_name` one being one the folders located in `./dotfiles`
+with `pkg_name` being the names of the folders located in `./dotfiles`
  
-2. **.append_bashrc** contains most of the setup you will need, you just need to append it to your `.bashrc`
+2. **.append_bashrc** contains most of the setup you will need for installed tools, you just need to append it to your `.bashrc`
 ```bash
-bat append_bashrc >> .bashrc
+cat append_bashrc >> .bashrc
 ```
-### Helix : code editor
-[Tutorial to install helix](https://docs.helix-editor.com/install.html)
-> Note: you can also use my helix config, set it up using stow as just shown above
-
-### Zellij plugins
-They are voluntarily taken of the repo to keep it lightweight. List of plugins to install : 
-- [rooms](https://github.com/rvcas/room)
