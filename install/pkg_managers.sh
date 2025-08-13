@@ -2,6 +2,7 @@
 set -e
 
 # pre requisite
+sudo apt update
 sudo apt install curl
 
 # uv
@@ -20,3 +21,10 @@ source $HOME/.cargo/env
 rustup update stable
 install rust-analyzer
 rustup component add rust-analyzer
+
+# I'd love to get rid of these that are only for bash.
+# npm
+sudo apt install npm
+
+# go
+sudo apt-get -y install golang-go 
