@@ -6,6 +6,7 @@
 # https://github.com/greg-is-kub/setup
 
 #Helix set as default editor
+# ASSUMING HELIX HAS BEEN BUILT FROM SOURCE OR INSTALLED 
 export EDITOR=$HOME/.cargo/bin/hx
 
 ## append to $PATH
@@ -18,6 +19,12 @@ export PATH=$PATH:/usr/local/go/bin
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # setup uv
 source $HOME/.local/share/../bin/env
+
+# bash completion for custom commands
+if [ -d "$HOME/.local/share/bash-completion" ]; then
+    export XDG_DATA_DIRS="$HOME/.local/share:$XDG_DATA_DIRS"
+    source $HOME/.local/share/bash-completion/completions/*
+fi
 
 # ALIASES
 ## LSD
@@ -33,14 +40,13 @@ alias py="python"
 # bear
 alias bear='bear --output ./build/compile_commands.json'
 
-## setup tools
-# starship prompt
+## setup shell completion
 eval "$(starship init bash)"
-# Set up fzf key bindings and fuzzy completion
+eval "$(uv generate-shell-completion bash)"
+eval "$(zellij setup --generate-completion bash)"
 eval "$(fzf --bash)"
-# carapace completer
+
 export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
 source <(carapace _carapace)
 
-# zoxide
 eval "$(zoxide init bash)"
