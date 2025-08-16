@@ -2,6 +2,10 @@
 
 set -e
 
+#install bat
+echo "============================== installing bat ==============================="
+brew install bat
+
 #install glow
 echo "============================== installing glow ==============================="
 brew install glow
