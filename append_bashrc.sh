@@ -43,6 +43,7 @@ alias bear='bear --output ./build/compile_commands.json'
 ## setup shell completion
 eval "$(starship init bash)"
 eval "$(uv generate-shell-completion bash)"
+eval "$(ty generate-shell-completion bash)"
 eval "$(zellij setup --generate-completion bash)"
 eval "$(fzf --bash)"
 

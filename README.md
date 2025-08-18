@@ -16,7 +16,7 @@ contains scripts to automatically install my fav utils
 ### Language related pkg
 #### build
  - [git](https://git-scm.com/) nothing to present here
- - [uv](https://docs.astral.sh/uv/), the goto tool for python that replaces `pip`, `pip-tools`, `pipx`, `poetry`, `pyenv`, `twine`, `virtualenv`, and more.
+ - [uv](https://docs.astral.sh/uv/), the goto tool for python that replaces `pip`, `pip-tools`, `pipx`, `poetry`, `pyenv`, `twine`, `virtualenv`, and more. Written in rust by [astral](https://astral.sh/).
 
 #### Debuggers
  - **[gdb-dashboard](https://github.com/cyrus-and/gdb-dashboard)** Fancy dashboard for gdb written in python
@@ -40,11 +40,13 @@ contains scripts to automatically install my fav utils
 ### LSP
 - **C++**
     - [clangd](https://github.com/clangd/clangd) C lang LSP
-    - [bear](https://github.com/rizsotto/Bear) a tool to replace make & generate `compile_commands.json` from a MakeFile
+    - [bear](https://github.com/rizsotto/Bear) a tool that wraps make & generate `compile_commands.json` from a MakeFile
 - **python**
-    - [pyrefly](https://pyrefly.org/) static type check
-    - [pylsp](https://github.com/python-lsp/python-lsp-server) python lsp
-    - [ruff](https://docs.astral.sh/ruff/) python lsp & formatter
+    - [pylsp](https://github.com/python-lsp/python-lsp-server) : the old python lsp, written in python, slow as f
+    - [pyrefly](https://pyrefly.org/) static type checker made by meta (we don't like meta but its the best as of now)
+    - [ruff](https://docs.astral.sh/ruff/) python formatter written in rust by [astral](https://astral.sh/)
+    - [ty](https://docs.astral.sh/ruff/) python type checker written in rust by [astral](https://astral.sh/) (beta, not really feature complete as of now)
+
 # install
 
 ## pre-requisite

@@ -1,3 +1,6 @@
+###################################################################################
+# rust
+###################################################################################
 [[language]]
 name = "rust"
 language-servers = ["rust-analyzer" ]
@@ -7,13 +10,15 @@ indent = { tab-width = 4, unit = "t" }
 [language-server.rust-analyzer]
 command = "rust-analyzer"
 
+###################################################################################
+# CXX
+###################################################################################
 [[language]]
 name = "c"
 language-servers =  ["clangd-20"]
 auto-format = false
 formatter = { command = "clang-format-20", args = ["--style=file"] }
 indent = { tab-width = 4, unit = " " }
-
 [[language]]
 name = "cpp"
 language-servers =  ["clangd-20"]
@@ -21,11 +26,13 @@ auto-format = false
 indent = { tab-width = 4, unit = "t" }
 formatter = { command = "clang-format-20", args = ["--style=file"] }
 comment-token = "//"
-
 [language-server.clangd-20]
 command = "clangd-20"
 args=["--compile-commands-dir=./build_bundle_cpp"] 
 
+###################################################################################
+# bash
+###################################################################################
 [[language]]
 name = "bash"
 language-servers = ["bash-language-server"]
@@ -35,18 +42,27 @@ auto-format = true
 [language-server.bash-language-server]
 command = "bash-language-server"
 
+###################################################################################
+# python
+###################################################################################
 [[language]]
 name = "python"
-language-servers = [ "ruff", "pyrefly" ]
-# language-servers = [ "pylsp", "ruff", "pyrefly" ]
+language-servers = [ "ruff", "pyrefly"]
+# language-servers = [ "ruff", "ty" ]
+# language-servers = [ "ruff", "pylsp"]
 formatter = { command = "ruff", args = ["format", "--line-length", "88", "-"] }
 auto-format = false
+[language-server.ruff]
+command = "ruff"
+args = [ "server" ]
 
+[language-server.ty]
+command = "ty"
+args = [ "server" ]
+
+# unused as of now
 [language-server.pylsp]
 command = "pylsp"
-
-[language-server.ruff]
-command = "ruff-lsp"
 
 [language-server.pyrefly]
 command = "pyrefly"
