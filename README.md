@@ -24,7 +24,7 @@ contains scripts to automatically install my fav utils
 
 #### CLI-tools :
  - **[delta](https://github.com/dandavison/delta/)** enhanced `diff` that can be used to replace `git diff` as well
- - **[helix](https://github.com/helix-editor/)** code editor
+ - **[helix](https://github.com/helix-editor/)** "batteries-included" modal code editor
  - **[gitui](https://github.com/extrawurst/gitui)** git gui allowing line-by-line commits, very efficient, very useful
  - **[lsd](https://github.com/Peltoche/lsd)** enhanced ls command
  - **[zoxide](https://github.com/ajeetdsouza/zoxide)** enhanced cd command
@@ -38,6 +38,8 @@ contains scripts to automatically install my fav utils
  - **[glow](https://github.com/charmbracelet/glow)** A Markdown visualizer & editor
 
 ### LSP
+To ease code navigation in helix, you can install LSP's. 
+
 - **C++**
     - [clangd](https://github.com/clangd/clangd) C lang LSP
     - [bear](https://github.com/rizsotto/Bear) a tool that wraps make & generate `compile_commands.json` from a MakeFile
@@ -46,6 +48,11 @@ contains scripts to automatically install my fav utils
     - [pyrefly](https://pyrefly.org/) static type checker made by meta (we don't like meta but its the best as of now)
     - [ruff](https://docs.astral.sh/ruff/) python formatter written in rust by [astral](https://astral.sh/)
     - [ty](https://docs.astral.sh/ruff/) python type checker written in rust by [astral](https://astral.sh/) (beta, not really feature complete as of now)
+
+> [!note] If you wish to add a new LSP support you are more than welcome to submit a pull request. 
+> This would comprise :
+> 1. Scripts to install the language's LSP.
+> 2. Config for the helix editor in `./dotfiles/helix/.config/helix/languages.toml`.
 
 # install
 
