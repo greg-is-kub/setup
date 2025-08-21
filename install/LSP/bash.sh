@@ -4,4 +4,4 @@ echo "--------------------------------------installing bash language server-----
 sudo npm i -g bash-language-server
 
 echo "--------------------------------------installing bash code formatter-------------------------------"
-go install mvdan.cc/sh/v3/cmd/shfmt@latest
+sudo GOBIN=/usr/local/bin go install mvdan.cc/sh/v3/cmd/shfmt@latest
