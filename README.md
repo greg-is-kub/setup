@@ -6,8 +6,11 @@ This whole git is meant to be used also for dockers that have `$HOME` mounted.
 ## packages that will be installed
 contains scripts to automatically install my fav utils
 
+### Terminal
+ - **[Alacritty](https://github.com/alacritty/alacritty)** a good lightweight terminal (install through flathub).
+ - **[Ghostty](https://ghostty.org/download)** nice terminal that uses kitty graphic protocol to use GPU.
+
 ### Terminal configuration : 
- - **[Alacritty](https://github.com/alacritty/alacritty)** a good terminal (install through flathub)
  - **[zellij](https://github.com/zellij-org/zellij/)** terminal multiplexer like tmux but easy to use
  - **[starship](starship.rs/)** terminal prompt to make your term look fancy
  - **[carapace](https://github.com/carapace-sh/carapace)** bash command completer
