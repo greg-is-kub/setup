@@ -28,7 +28,7 @@ formatter = { command = "clang-format-20", args = ["--style=file"] }
 comment-token = "//"
 [language-server.clangd-20]
 command = "clangd-20"
-args=["--compile-commands-dir=./build_bundle_cpp"] 
+args=["--compile-commands-dir=./build"] 
 
 ###################################################################################
 # bash
