@@ -36,8 +36,16 @@ up = "no_op"
 down = "no_op"
 left = "no_op"
 right = "no_op"
-# yazi picker
+# yazi picker FAILING
 C-y = ":sh zellij run -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh"
+# gitui integration FAILING
+A-g = [
+  ":new" ,
+  ":insert-output gitui",
+  ":buffer-close!",
+  ":redraw",
+  ":reload-all"
+]
 
 [keys.insert]
 # move line up
