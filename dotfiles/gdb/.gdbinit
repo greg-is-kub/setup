@@ -2404,12 +2404,23 @@ set python print-stack full
 # Start ------------------------------------------------------------------------
 
 python Dashboard.start()
-define default-profile
-    start
+
+define profile-catch2
     dashboard assembly
-    dashboard history
-    dashboard register
+    dashboard breakpoints
+    dashboard expressions
+    dashboard memory
+    dashboard registers
+    dashboard stack
+    dashboard threads
     dashboard variables -style compact False
+    dashboard variables -style sort True
+end
+
+
+# my macros ---------------------------------------------------------------
+define ninja
+  ninja
 end
 
 # File variables ---------------------------------------------------------------
