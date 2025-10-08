@@ -68,3 +68,8 @@ cursor-style-blink = true
 # clipboard-write
 clipboard-write = allow
 clipboard-trim-trailing-spaces = true
+
+# Zoom
+# + is Maj + "="
+keybind = all:super+equal=increase_font_size:1 
+keybind = all:super+plus=increase_font_size:1
