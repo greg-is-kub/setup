@@ -5,7 +5,7 @@
 name = "rust"
 language-servers = ["rust-analyzer" ]
 formatter = { command = "rustfmt" }
-auto-format = true
+auto-format = false
 indent = { tab-width = 4, unit = "t" }
 [language-server.rust-analyzer]
 command = "rust-analyzer"
@@ -47,8 +47,9 @@ command = "bash-language-server"
 ###################################################################################
 [[language]]
 name = "python"
-language-servers = [ "ruff", "pyrefly"]
+# language-servers = [ "pyrefly", "ruff"]
 # language-servers = [ "ruff", "ty" ]
+language-servers = [ "ruff", "ty", "pyrefly" ]
 # language-servers = [ "ruff", "pylsp"]
 formatter = { command = "ruff", args = ["format", "--line-length", "88", "-"] }
 auto-format = false
