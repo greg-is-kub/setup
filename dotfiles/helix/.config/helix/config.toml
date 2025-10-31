@@ -12,6 +12,7 @@ true-color = false
 
 [editor.inline-diagnostics]
 cursor-line = "hint"
+other-lines = "disable"
 
 [editor.statusline]
 left = ["mode", "spinner", "file-name"]
