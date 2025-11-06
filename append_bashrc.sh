@@ -1,12 +1,10 @@
-
-
-################################################# 
-# This part of .bashrc was automaticallly added 
+#################################################
+# This part of .bashrc was automaticallly added
 # by append_bashrc.sh from
 # https://github.com/greg-is-kub/setup
 
 #Helix set as default editor
-# ASSUMING HELIX HAS BEEN BUILT FROM SOURCE OR INSTALLED 
+# ASSUMING HELIX HAS BEEN BUILT FROM SOURCE OR INSTALLED
 export EDITOR=$HOME/.cargo/bin/hx
 
 ## append to $PATH
@@ -17,8 +15,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 # Setup Brew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-# setup uv
-source $HOME/.local/share/../bin/env
 
 # bash completion for custom commands
 if [ -d "$HOME/.local/share/bash-completion" ]; then
