@@ -33,8 +33,6 @@ alias lt='ls --tree'
 alias bat='bat -p'
 ## PYTHON
 alias py="python"
-# bear
-alias bear='bear --output ./build/compile_commands.json'
 
 ## setup shell completion
 eval "$(starship init bash)"

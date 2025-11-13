@@ -9,5 +9,5 @@ sudo ./llvm.sh
 apt install clangd-20
 apt install clang-format-20
 
-# Bear
-apt-get install -y bear
+# compiledb
+uv tool install compiledb

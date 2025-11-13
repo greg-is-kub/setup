@@ -45,7 +45,7 @@ To ease code navigation in helix, you can install LSP's.
 
 - **C++**
     - [clangd](https://github.com/clangd/clangd) C lang LSP
-    - [bear](https://github.com/rizsotto/Bear) a tool that wraps make & generate `compile_commands.json` from a MakeFile
+    - [compiledb](https://github.com/nickdiego/compiledb) a tool that wraps `make` & generate `compile_commands.json` from a `Makefile`
 - **python**
     - [pylsp](https://github.com/python-lsp/python-lsp-server) : the old python lsp, written in python, slow as f
     - [pyrefly](https://pyrefly.org/) static type checker made by meta (we don't like meta but its the best as of now)
