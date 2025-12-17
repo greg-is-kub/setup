@@ -4,19 +4,34 @@
 [core]
     pager = delta
     editor = "sh -c $HOME/.cargo/bin/hx" # using sh because gitui doesn't understands the $HOME variable otherwise
+[init]
+	defaultBranch = main
 [interactive]
     diffFilter = delta --color-only
 [add.interactive]
     useBuiltin = false # required for git 2.37.0
+[diff]
+    colorMoved = default
+	tool = meld
+[difftool]
+	prompt = false
 [delta]
     navigate = true    # use n and N to move between diff sections
     light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
     side-by-side = true
     line-numbers = true
-[diff]
-    colorMoved = default
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
 [merge]
     conflictStyle = zdiff3
+
+# useful useful useful
 [alias]
     branch-delete-merged = "!git branch --merged | grep -Ev '(^\\*|^\\+|master|main|dev)' | xargs --no-run-if-empty git branch -d"
     undo = "reset --soft HEAD^"
+
