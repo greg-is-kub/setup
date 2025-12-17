@@ -34,14 +34,16 @@ alias bat='bat -p'
 ## PYTHON
 alias py="python"
 
+# init tools
+eval "$(zoxide init bash)"
+eval "$(atuin init bash)"
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+source <(carapace _carapace)
+
 ## setup shell completion
 eval "$(starship init bash)"
 eval "$(uv generate-shell-completion bash)"
 eval "$(ty generate-shell-completion bash)"
 eval "$(zellij setup --generate-completion bash)"
 eval "$(fzf --bash)"
-
-export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
-source <(carapace _carapace)
-
-eval "$(zoxide init bash)"
+eval "$(atuin gen-completions --shell bash --out-dir $HOME)"
