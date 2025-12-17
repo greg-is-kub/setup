@@ -26,6 +26,7 @@ contains scripts to automatically install my fav utils
  - **[ipdb](https://pypi.org/project/ipdb/)** Better python debugger
 
 #### CLI-tools :
+ - **[atuin](https://atuin.sh/) Magical shell history
  - **[delta](https://github.com/dandavison/delta/)** enhanced `diff` that can be used to replace `git diff` as well
  - **[helix](https://github.com/helix-editor/)** "batteries-included" modal code editor
  - **[gitui](https://github.com/extrawurst/gitui)** git gui allowing line-by-line commits, very efficient, very useful

@@ -2,27 +2,24 @@
 
 set -e
 
-#install bat
-echo "============================== installing bat ==============================="
+echo -e "\n\n\n============================== installing bat ==============================="
+brew install atuin
+
+echo -e "\n\n\n============================== installing bat ==============================="
 brew install bat
 
-#install glow
-echo "============================== installing glow ==============================="
+echo -e "\n\n\n============================== installing glow ==============================="
 brew install glow
 
-#install gitui
-echo "============================== installing gitui ==============================="
+echo -e "\n\n\n============================== installing gitui ==============================="
 brew install gitui
 
-#install fzf
-echo "============================== installing fzf ==============================="
+echo -e "\n\n\n============================== installing fzf ==============================="
 brew install fzf
 
-# install carapace
-echo "============================== installing carapace ==============================="
+echo -e "\n\n\n============================== installing carapace ==============================="
 brew tap rsteube/homebrew-tap
 brew install rsteube/tap/carapace
 
-# install tldr
-echo "============================== installing tldr ==============================="
+echo -e "\n\n\n============================== installing tldr ==============================="
 brew install tlrc
