@@ -29,7 +29,7 @@ contains scripts to automatically install my fav utils
  - **[atuin](https://atuin.sh/) Magical shell history
  - **[delta](https://github.com/dandavison/delta/)** enhanced `diff` that can be used to replace `git diff` as well
  - **[helix](https://github.com/helix-editor/)** "batteries-included" modal code editor
- - **[gitui](https://github.com/extrawurst/gitui)** git gui allowing line-by-line commits, very efficient, very useful
+ - **[gitui](https://github.com/gitui-org/gitui)** git gui allowing line-by-line commits, very efficient, very useful
  - **[lsd](https://github.com/Peltoche/lsd)** enhanced ls command
  - **[zoxide](https://github.com/ajeetdsouza/zoxide)** enhanced cd command
  - **[bat](https://github.com/sharkdp/bat)** enhanced cat command
