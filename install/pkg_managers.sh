@@ -30,9 +30,9 @@ function install_if_not_in_path {
     install rust-analyzer
     rustup component add rust-analyzer
   ;;
-   "uv" )
-    curl -LsSf https://astral.sh/uv/install.sh | sh
-    ;;
+  "uv" )
+    brew install uv
+  ;;
   * )
     echo "Invalid argument. Exiting."
     exit 1
@@ -40,8 +40,8 @@ function install_if_not_in_path {
 }
 
 install_if_not_in_path curl # pre reqeuisite
-install_if_not_in_path uv
 install_if_not_in_path brew
+install_if_not_in_path uv
 install_if_not_in_path cargo
 install_if_not_in_path npm
 install_if_not_in_path go
