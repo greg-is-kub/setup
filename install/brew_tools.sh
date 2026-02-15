@@ -23,3 +23,6 @@ brew install rsteube/tap/carapace
 
 echo -e "\n\n\n============================== installing tldr ==============================="
 brew install tlrc
+
+echo -e "\n\n\n============================== installing cargo-binstall ==============================="
+brew install cargo-binstall

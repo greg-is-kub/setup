@@ -1,34 +1,41 @@
 #!/bin/bash
 
+
+function cargo_install_or_update{
+  if [[ which $1 2>/dev/null ]]; then
+    echo "$1 already installed. Skipping."
+  fi
+
+}
+
 # install delta : diff enhancement
 echo "============================== installing delta ==============================="
-cargo install git-delta
+cargo binstall git-delta
 
 # install gitui
 echo "============================== installing gitui ==============================="
-cargo install gitui --locked
+cargo binstall gitui --locked
 
-#install lsd 
+#install lsd
 echo "=============================== installing lsd ==============================="
-cargo install lsd
+cargo binstall lsd
 
-# install serpl 
+# install serpl
 echo "============================== installing serpl ==============================="
-cargo install serpl --locked
+cargo binstall serpl --locked
 
-# install tokei 
+# install tokei
 echo "============================== installing tokei ==============================="
-cargo install tokei --locked
+cargo binstall tokei --locked
 
 # install yazi
 echo "============================== installing yazi ==============================="
-cargo install --locked yazi-fm yazi-cli
+cargo binstall --locked yazi-fm yazi-cli
 
 # install zellij
 echo "============================== installing zellij ==============================="
-cargo install zellij --locked
+cargo binstall zellij --locked
 
 # install zoxide
 echo "============================== installing zoxide ==============================="
-cargo install zoxide --locked
-
+cargo binstall zoxide --locked

@@ -33,6 +33,9 @@ function install_if_not_in_path {
   "uv" )
     brew install uv
   ;;
+  "cargo-binstall" )
+     brew install cargo-binstall
+  ;;
   * )
     echo "Invalid argument. Exiting."
     exit 1
@@ -45,3 +48,4 @@ install_if_not_in_path uv
 install_if_not_in_path cargo
 install_if_not_in_path npm
 install_if_not_in_path go
+install_if_not_in_path cargo-binstall
