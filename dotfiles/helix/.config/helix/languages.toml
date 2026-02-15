@@ -15,20 +15,24 @@ command = "rust-analyzer"
 ###################################################################################
 [[language]]
 name = "c"
-language-servers =  ["clangd-20"]
+language-servers = ["clangd"]
 auto-format = false
-formatter = { command = "clang-format-20", args = ["--style=file"] }
+formatter = { command = "clang-format-20", args = ["--style=llvm"] }
 indent = { tab-width = 4, unit = " " }
+
 [[language]]
 name = "cpp"
-language-servers =  ["clangd-20"]
+language-servers = ["clangd"]
 auto-format = false
 indent = { tab-width = 4, unit = "t" }
 formatter = { command = "clang-format-20", args = ["--style=file"] }
 comment-token = "//"
-[language-server.clangd-20]
+
+[language-server.clangd]
 command = "clangd-20"
-args=["--compile-commands-dir=./build"] 
+args = [
+    "--compile-commands-dir=./build"
+]
 
 ###################################################################################
 # bash
@@ -48,8 +52,9 @@ command = "bash-language-server"
 [[language]]
 name = "python"
 # language-servers = [ "pyrefly", "ruff"]
-# language-servers = [ "ruff", "ty" ]
-language-servers = [ "ruff", "ty", "pyrefly" ]
+language-servers = [ "ruff", "ty" ]
+# language-servers = [ "ruff", "pyrefly" ]
+# language-servers = [ "ruff", "ty", "pyrefly" ]
 # language-servers = [ "ruff", "pylsp"]
 formatter = { command = "ruff", args = ["format", "--line-length", "88", "-"] }
 auto-format = false
