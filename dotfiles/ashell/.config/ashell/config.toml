@@ -1,0 +1,11 @@
+[main]
+enable_esc_key = true
+
+[modules]
+left = [ "Workspaces", "MediaPlayer" ]
+center = [ "WindowTitle" ]
+right = [ [ "SystemInfo", "Updates", "KeyboardLayout"], "Tray", [ "Clock", "Privacy" ], "Settings" ]
+
+# [updates]
+# check_cmd = "checkupdates; paru -Qua"
+# update_cmd = 'alacritty -e bash -c "paru; echo Done - Press enter 
