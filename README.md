@@ -48,8 +48,6 @@ To ease code navigation in helix, you can install LSP's.
     - [clangd](https://github.com/clangd/clangd) C lang LSP
     - [compiledb](https://github.com/nickdiego/compiledb) a tool that wraps `make` & generate `compile_commands.json` from a `Makefile`
 - **python**
-    - [pylsp](https://github.com/python-lsp/python-lsp-server) : the old python lsp, written in python, slow as f
-    - [pyrefly](https://pyrefly.org/) static type checker made by meta (we don't like meta but its the best as of now)
     - [ruff](https://docs.astral.sh/ruff/) python formatter written in rust by [astral](https://astral.sh/)
     - [ty](https://docs.astral.sh/ruff/) python type checker written in rust by [astral](https://astral.sh/) (beta, not really feature complete as of now)
 
